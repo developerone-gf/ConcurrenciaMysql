@@ -18,6 +18,7 @@ try{
         foreach ($row as $key => $value) {
             print $value.' ';
         }
+        var_dump("listo línea");
         print '\n';
     }
 }catch(Exception $e){
