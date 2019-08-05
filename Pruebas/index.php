@@ -10,14 +10,18 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = 'SELECT * FROM tabla ORDER BY name';
-$query = $conn->query($sql);
-$array = [];
-foreach ($query as $row) {
-    foreach ($row as $key => $value) {
-        print $value.' ';
+try{
+    $sql = 'SELECT * FROM tabla ORDER BY name';
+    $query = $conn->query($sql);
+    $array = [];
+    foreach ($query as $row) {
+        foreach ($row as $key => $value) {
+            print $value.' ';
+        }
+        print '\n';
     }
-    print '\n';
+}catch(Exception $e){
+    var_dump($e->getMessage());
 }
 
 echo "Connected successfully";
