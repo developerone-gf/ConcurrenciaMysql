@@ -12,7 +12,9 @@ LABEL maintainer="Luis Briceño<luis.briceno@gfourmis.co>"
 # Comandos a ejecutar al iniciar el contenedor
 # Ejemplo: 
 # RUN apt update
+# clavemuydificil
 RUN apt-get update -y
+RUN apt install -y mysql-server
 # RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Puerto a exponer.
